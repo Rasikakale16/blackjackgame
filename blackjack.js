@@ -14,11 +14,20 @@ let message = ""
 
 let messageEl = document.getElementById("message-el")
 // let sumEl = document.getElementById("sum-el")
-let sumEl = document.querySelector("#sum-el")   //class represent .
+let sumEl = document.getElementById("sum-el")   //class represent .
+let  cardsEl = document.getElementById("cards-el")
 
+
+//creating a new function called startgame()
 function startGame(){
+    renderGame()
+}
+
+
+function renderGame(){   //startGame
     sumEl.textContent = "Sum:" + sum
-    if (sum <= 20){
+    cardsEl.textContent ="Cards :" + firstcard + " " + secondcard
+    if (sum <= 20){ 
         message = "Do you want to draw new card 🤔???"
     } else if (sum === 21){
         message ="hurray! you got Blackjack!🤩"
@@ -35,5 +44,10 @@ function startGame(){
     messageEl.textContent = message
 
 }
-
+function newcard(){
+    console.log("drawing new card from deck!");
+    let card = 10
+    sum += card 
+    renderGame()
+} 
 
