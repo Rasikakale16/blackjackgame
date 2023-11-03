@@ -23,6 +23,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")   //class represent .
 let  cardsEl = document.getElementById("cards-el")
 
+
 let player = { //creating in an object
     name :"Per",
     chips: 120  // name and chips is key andper 120 is value
@@ -33,8 +34,8 @@ let player = { //creating in an object
 //let playerchips = 120
 
 let playerEl = document.getElementById("player-el")
+//rendering the player's name and chips in playerEl
 playerEl.textContent =player.name +": $" + player.chips
-
 
 console.log(cards); //after rendering function startGame()
 
@@ -99,13 +100,21 @@ function renderGame(){   //startGame
 
 }
 function newcard(){
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    //let isAlive = true
+    //let hasBlackJack = false
+    if(isAlive === true && hasblackjack === false){
+        let card = getRandomcard()
+        sum += card 
+        cards.push(card)
+        renderGame()
+    
+    }
+
     //let card = 10
-    let card = getRandomcard()
-    sum += card 
-    cards.push(card)
+    // let card = getRandomcard()
+    // sum += card 
+    // cards.push(card)
     //console.log(cards);
-    renderGame()
+    //renderGame()
 } 
-
-
-
