@@ -1,2 +1,2 @@
 # blackjackgame
-building a blackjackgame using javascript.
+build a blackjackgame using javascript with maths objects.
