@@ -23,6 +23,19 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")   //class represent .
 let  cardsEl = document.getElementById("cards-el")
 
+let player = { //creating in an object
+    name :"Per",
+    chips: 120  // name and chips is key andper 120 is value
+
+}
+
+//let playerName ="Per"  creating it inside an object
+//let playerchips = 120
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent =player.name +": $" + player.chips
+
+
 console.log(cards); //after rendering function startGame()
 
 //creating a function getRandomcard() that always retuns the number 5
